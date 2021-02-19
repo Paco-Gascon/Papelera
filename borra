@@ -1,0 +1,18 @@
+#!/bin/bash
+
+	#El escript lo he indicado para poder indicar el archico que deseamos buscar, pudiendo ser otro
+	# que el archivo borra.
+	#La busqueda la realiza dentro de la carpeta Papelera.
+
+
+	echo "Introduce el nombre del fichero que quieres comprobar si existe o no"
+	read FICHERO
+
+	
+	if [ -f $FICHERO  ];
+		then
+			echo "Si existe el archivo indicado"
+		else
+			echo "No existe el archivo indicado"
+		
+	fi
