@@ -1,18 +1,34 @@
 #!/bin/bash
 
+
+	#ENUNCIADO DE LA TAREA: Comprobación de que existe el fichero a restaurar
+
 	#El escript lo he indicado para poder indicar el archico que deseamos buscar, pudiendo ser otro
 	# que el archivo borra.
 	#La busqueda la realiza dentro de la carpeta Papelera.
 
 
 	echo "Introduce el nombre del fichero que quieres comprobar si existe o no"
-	read FICHERO
-
+	read FICHERO;
+	#FICHERO=~/.Papelera
 	
-	if [ -f $FICHERO  ];
+	if [ -f $FICHERO ];
 		then
-			echo "Si existe el archivo indicado"
+			echo Si existe el archivo $FICHERO
 		else
-			echo "No existe el archivo indicado"
+			echo No existe el archivo indicado
 		
 	fi
+
+
+# PARA QUE SE PUEDA EJECUTAR DESDE CUALQUIER UBICACION
+
+	#Para que se pueda ejecutar el script desde cualquier ubicación, en la terminal le he dado 
+		# permisos de ejecucion -->  escribimos en la terminal:  chmod +x borra
+	#Luego escribimos los siguiente:
+			# ln -s /home/usuario(el mio)/Papelera/borra /usr/bin
+	#CON ESTO CONSIGO EJECUTAR EL SCRIPT DESDE CUALQUIER CARPETA PARA VER SI EXISTE O NO EL ARCHIVO, PERO SOLO BUSCA EN LA CARPETA DESDE LA QUE EJECUTAMOS EL SCRIPT
+
+
+	
+
